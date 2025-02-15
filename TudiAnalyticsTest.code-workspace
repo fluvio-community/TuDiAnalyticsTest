@@ -1,0 +1,879 @@
+{
+	"folders": [
+		{
+			"name": "TudiAnalyticsTest",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/opt/ssd2/work/Unreal_Engine_5.5"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "TudiAnalyticsTest Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"Linux",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Test",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTest LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTest LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTest",
+					"LinuxArm64",
+					"Shipping",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTestEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Debug",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTestEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"DebugGame",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TudiAnalyticsTestEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			},
+			{
+				"label": "TudiAnalyticsTestEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TudiAnalyticsTestEditor",
+					"Linux",
+					"Development",
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch TudiAnalyticsTest (Debug)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/TudiAnalyticsTest/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "TudiAnalyticsTest Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTest (DebugGame)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/TudiAnalyticsTest/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "TudiAnalyticsTest Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTest (Development)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/TudiAnalyticsTest/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "TudiAnalyticsTest Linux Development Build",
+				"args": [
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTest (Test)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/TudiAnalyticsTest/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "TudiAnalyticsTest Linux Test Build",
+				"args": [
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTest (Shipping)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/TudiAnalyticsTest/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "TudiAnalyticsTest Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTestEditor (Debug)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "TudiAnalyticsTestEditor Linux Debug Build",
+				"args": [
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject"
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTestEditor (DebugGame)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "TudiAnalyticsTestEditor Linux DebugGame Build",
+				"args": [
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject"
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TudiAnalyticsTestEditor (Development)",
+				"request": "launch",
+				"program": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "TudiAnalyticsTestEditor Linux Development Build",
+				"args": [
+					"/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject"
+				],
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5",
+				"type": "cppdbg",
+				"visualizerFile": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/opt/ssd2/work/TudiAnalyticsTest/TudiAnalyticsTest.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/opt/ssd2/work/Unreal_Engine_5.5"
+			}
+		]
+	}
+}
