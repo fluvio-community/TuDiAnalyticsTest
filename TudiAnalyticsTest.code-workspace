@@ -18,7 +18,27 @@
 			"DOTNET_HOST_PATH": "/opt/ssd2/work/Unreal_Engine_5.5/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
 			"DOTNET_MULTILEVEL_LOOKUP": "0",
 			"DOTNET_ROLL_FORWARD": "LatestMajor"
-		}
+		},
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#49c8f9",
+			"activityBar.background": "#49c8f9",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#d8079e",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#15202b99",
+			"sash.hoverBorder": "#49c8f9",
+			"statusBar.background": "#18b9f8",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#079cd6",
+			"statusBarItem.remoteBackground": "#18b9f8",
+			"statusBarItem.remoteForeground": "#15202b",
+			"titleBar.activeBackground": "#18b9f8",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#18b9f899",
+			"titleBar.inactiveForeground": "#15202b99"
+		},
+		"peacock.color": "#18b9f8"
 	},
 	"extensions": {
 		"recommendations": [
