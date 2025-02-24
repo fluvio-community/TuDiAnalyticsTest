@@ -1,0 +1,3 @@
+[submodule "Plugins/InfinyonAnalytics"]
+	path = Plugins/InfinyonAnalytics
+	url = https://github.com/fluvio-community/InfinyonAnalytics.git

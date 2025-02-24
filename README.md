@@ -1,4 +1,45 @@
-# Unreal Engine 5 2D Side Scroller Blueprint Template
+# Description
+
+TudiAnalyticsTest is a project that shows an example integration of the
+InfinyonAnalytics, Analytics provider plugin.
+
+The game was initially generated from an open sidescroller template here:
+https://github.com/CobraCodeDev/TP_2DSideScrollerBP
+
+Changes were made to install the `InfinyonAnalytics` plugin,
+as well as add Analytics events generation within the Blueprints of the
+generated code.  The blueprint generated events are standard IAnalyticsEvent
+events.
+
+## Setup
+
+Checkout this repostity with `git clone https://github.com/fluvio-community/TudiAnalyticsTest.git`
+and **also checkout the submodules** `git submodule update --init --recursive`
+
+Or you can add the `InfinyonAnlytics` Plugin to your project:
+see https://github.com/fluvio-community/InfinyonAnalytics
+
+Either way, you will need to **Configure the Plugin** with an api key to send
+analytics to the Infinyon cloud for storage and analysis
+
+- Go to Infinyon.com and setup a fluvio cluster and create an access-key for
+    an analytics storage topic.
+    https://www.fluvio.io/docs/latest/cloud/how-to/use-ws-gateway
+- go the project `Config/DefaultEngine.ini` file and add this section
+    ```
+    [InfinyonAnalytics]
+    ApiKey=abcd
+    ```
+
+Visit us on Discord if you have any questions or comments
+https://discord.com/invite/bBG2dTz
+
+## Integration
+
+Integration was performed on Unreal Engine 5.5.3 on Linux, the project builds and runs on Unreal Engine 5.5.3 on MacOs
+
+
+# Unreal Engine 5 2D Side Scroller Blueprint Template Notes
 A basic 2D side scroller blueprint template for Unreal Engine 5.
 **This template requires Unreal Engine 5.1 or higher, however 5.3 or higher is recommended to prevent bugs with the orthographic camera**
 
